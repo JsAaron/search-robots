@@ -1,0 +1,35 @@
+{
+    "main": "index.html",
+    "name": "epub",
+    "window": {
+        "toolbar": true,
+        "icon": "link.png",
+        "frame": true,
+        "width": 800,
+        "height": 500,
+        "position": "center",
+        "min_width": 400,
+        "min_height": 200,
+        "max_width": 800,
+        "max_height": 600,
+        "show_in_taskbar": true
+    },
+    "webkit": {
+        "plugin": true
+    },
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JsAaron/search-robots.git"
+    },
+    "author": "Aaron",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JsAaron/search-robots/issues"
+    },
+    "homepage": "https://github.com/JsAaron/search-robots"
+}
