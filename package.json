@@ -5,13 +5,9 @@
         "toolbar": true,
         "icon": "link.png",
         "frame": true,
-        "width": 800,
-        "height": 500,
+        "width": 1000,
+        "height": 600,
         "position": "center",
-        "min_width": 400,
-        "min_height": 200,
-        "max_width": 800,
-        "max_height": 600,
         "show_in_taskbar": true
     },
     "webkit": {
