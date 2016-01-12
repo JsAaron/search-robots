@@ -11,7 +11,7 @@ module.exports = function(config) {
         module: {
             loaders: [{
                 test: /\.css$/,
-                loader: 'css'
+                loader: 'style!css'
             },{
                 test: /\.sass$/,
                 loader: 'style!css!sass'

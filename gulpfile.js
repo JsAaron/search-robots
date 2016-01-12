@@ -85,10 +85,9 @@ gulp.task('web-server', function() {
 
 
 gulp.task('watch', ["scripts", 'web-server'], function() {
-    gulp.watch(config.script.watch, ['scripts']);
-    gulp.watch(config.styl.src, ['scripts']);
-    gulp.watch(config.html.watchHome).on('change', reload);
-    gulp.watch(config.html.watchAll).on('change', reload);
+    gulp.watch(src + '**/*.js', ['scripts']);
+    gulp.watch(src + '**/*.css', ['scripts']);
+    gulp.watch('index.html').on('change', reload);
 })
 
 gulp.task('default', ['watch'])
