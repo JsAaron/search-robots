@@ -1,6 +1,5 @@
 body {
     background-color: #efeeed;
-    color: red;
 }
 
 .highlight {
@@ -24,7 +23,7 @@ body {
 
 .bs-example {
     position: relative;
-    padding: 45px 20px 20px;
+    padding: 45px 20px 0;
     margin: 20px -15px 15px;
     border-color: #e5e5e5 #eee #eee;
     border-style: solid;
@@ -54,4 +53,8 @@ section.top-bar-element img {
     display: block;
     margin-top: 13.5px;
     width: 50px;
+}
+
+.optionCheckbox{
+    padding-top: 20px
 }

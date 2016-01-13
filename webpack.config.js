@@ -1,3 +1,5 @@
+var webpack = require('webpack')
+
 module.exports = function(config) {
     return {
         // watch: true,
@@ -12,7 +14,7 @@ module.exports = function(config) {
             loaders: [{
                 test: /\.css$/,
                 loader: 'style!css'
-            },{
+            }, {
                 test: /\.sass$/,
                 loader: 'style!css!sass'
             }, {
@@ -25,6 +27,9 @@ module.exports = function(config) {
                 test: /\.html$/,
                 loader: "html"
             }]
-        }
+        },
+        plugins: [
+            new webpack.BannerPlugin('@by Aaron')
+        ]
     }
 }

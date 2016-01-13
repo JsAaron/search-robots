@@ -6,7 +6,7 @@
         "icon": "link.png",
         "frame": true,
         "width": 1000,
-        "height": 600,
+        "height": 700,
         "position": "center",
         "show_in_taskbar": true
     },
