@@ -47,7 +47,16 @@
 
 	__webpack_require__(1)
 	
-	console.log(2)  
+	// var gui = requireNodePack('nw.gui');
+	// var win = gui.Window.get();
+	
+	
+	// var $capture = $("#capture");
+	
+	
+	// $capture.click(function(){
+	// 	// win.width = 1500;
+	// })
 
 /***/ },
 /* 1 */
@@ -84,7 +93,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\r\n    background-color: #efeeed;\r\n}\r\n\r\n.highlight {\r\n    padding: 9px 14px;\r\n    margin-bottom: 14px;\r\n    background-color: #f7f7f9;\r\n    border: 1px solid #e1e1e8;\r\n    border-radius: 4px;\r\n}\r\n\r\n@media (min-width: 768px) .bs-example {\r\n    margin-right: 0;\r\n    margin-left: 0;\r\n    background-color: #fff;\r\n    border-color: #ddd;\r\n    border-width: 1px;\r\n    border-radius: 4px 4px 0 0;\r\n    -webkit-box-shadow: none;\r\n    box-shadow: none;\r\n}\r\n\r\n.bs-example {\r\n    position: relative;\r\n    padding: 45px 20px 0;\r\n    margin: 20px -15px 15px;\r\n    border-color: #e5e5e5 #eee #eee;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);\r\n    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);\r\n}\r\n\r\n\r\n.bs-example:after {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    font-size: 12px;\r\n    font-weight: 700;\r\n    color: #959595;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    content: \"\\6293\\53D6\\4FE1\\606F\";\r\n}\r\n\r\nsection.top-bar-element {\r\n    padding: 7.5px 0;\r\n}\r\nsection.top-bar-element img {\r\n    float: left;\r\n    display: block;\r\n    margin-top: 13.5px;\r\n    width: 50px;\r\n}\r\n\r\n.optionCheckbox{\r\n    padding-top: 20px\r\n}", ""]);
+	exports.push([module.id, "body {\r\n    background-color: #efeeed;\r\n}\r\n\r\n.container-main {\r\n    width: 500px;\r\n    float: left;\r\n/*    padding: 10px;*/\r\n}\r\n\r\n.highlight {\r\n    padding: 9px 14px;\r\n    margin-bottom: 14px;\r\n    background-color: #f7f7f9;\r\n    border: 1px solid #e1e1e8;\r\n    border-radius: 4px;\r\n}\r\n\r\n@media (min-width: 768px) .bs-example {\r\n    margin-right: 0;\r\n    margin-left: 0;\r\n    background-color: #fff;\r\n    border-color: #ddd;\r\n    border-width: 1px;\r\n    border-radius: 4px 4px 0 0;\r\n    -webkit-box-shadow: none;\r\n    box-shadow: none;\r\n}\r\n\r\n.bs-example {\r\n    position: relative;\r\n    padding: 45px 20px 0;\r\n    margin: 20px -15px 15px;\r\n    border-color: #e5e5e5 #eee #eee;\r\n    border-style: solid;\r\n    border-width: 1px 0;\r\n    -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);\r\n    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);\r\n}\r\n\r\n.bs-example:after {\r\n    position: absolute;\r\n    top: 15px;\r\n    left: 15px;\r\n    font-size: 12px;\r\n    font-weight: 700;\r\n    color: #959595;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1px;\r\n    content: \"\\6293\\53D6\\4FE1\\606F\";\r\n}\r\n\r\nsection.top-bar-element {\r\n    padding: 7.5px 0;\r\n}\r\n\r\nsection.top-bar-element img {\r\n    float: left;\r\n    display: block;\r\n    margin-top: 13.5px;\r\n    width: 50px;\r\n}\r\n\r\n.optionCheckbox {\r\n    padding-top: 20px\r\n}\r\n\r\n\r\n/**\r\n * 抓取结果\r\n */\r\n\r\n.container-result {\r\n    width: 500px;\r\n    float: right;\r\n}\r\n", ""]);
 	
 	// exports
 

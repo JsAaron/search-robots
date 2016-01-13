@@ -6,39 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>搜索神器</title>
+    <script type="text/javascript">
+    // if (require) {
+    //     requireNodePack = require || {};
+    // }
+    </script>
     <!-- Bootstrap -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
-    <script src="dist/js/jquery.min.js"></script>
-    <script src="dist/js/bootstrap.js"></script>
-    <script src="dist/js/vue.js"></script>
-    <script src="release/bundle.js"></script>
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.js"></script>
+    <script src="lib/js/react.js"></script>
+    <script src="lib/js/JSXTransformer.js"></script>
 </head>
 
 <body>
-    <section class="top-bar-element">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="http://pic.58pic.com/58pic/16/42/96/56e58PICAu9_1024.jpg" alt="沙发网" title="沙发网">
-                    <h2 class="top-bar-link text-justify">搜索神器</h2>
+    <div class="container-main">
+        <section class="top-bar-element">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="http://pic.58pic.com/58pic/16/42/96/56e58PICAu9_1024.jpg" alt="沙发网" title="沙发网">
+                        <h2 class="top-bar-link text-justify">搜索神器</h2>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div>
-                    <form>
-                        <div class="form-group">
-                            <label>URL网址(例如:http://www.qq.com/(*).html)</label>
-                            <input type="text" class="form-control input-sm" id="inputUrl">
-                        </div>
-                    </form>
-                    <form id="inputContent" class="form-inline">
-                        <!-- <span id="helpBlock" class="help-block">输入想要搜索信息的关键字</span> -->
-                        <div class="form-group">
-                            <label>
+        </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label>URL网址(例如:http://www.qq.com/(*).html)</label>
+                                <input type="text" class="form-control input-sm" id="inputUrl">
+                            </div>
+                        </form>
+                        <form id="inputContent" class="form-inline">
+                            <!-- <span id="helpBlock" class="help-block">输入想要搜索信息的关键字</span> -->
+                            <div class="form-group">
+                                <label>
+                                    <label>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                            </label>
+                                        </div>
+                                    </label>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">关键字</div>
+                                    <input type="text" class="form-control input-sm" id="inputLength" placeholder="">
+                                </div>
+                                <label for="exampleInputPassword1"></label>
+                            </div>
+                        </form>
+                        <form id="inputContent" class="form-inline">
+                            <!-- <span id="helpBlock" class="help-block">输入想要搜索信息的关键字</span> -->
+                            <div class="form-group">
                                 <label>
                                     <div class="radio">
                                         <label>
@@ -46,93 +70,79 @@
                                         </label>
                                     </div>
                                 </label>
-                            </label>
-                            <div class="input-group">
-                                <div class="input-group-addon">关键字</div>
-                                <input type="text" class="form-control input-sm" id="inputLength" placeholder="">
-                            </div>
-                            <label for="exampleInputPassword1"></label>
-                        </div>
-                    </form>
-                    <form id="inputContent" class="form-inline">
-                        <!-- <span id="helpBlock" class="help-block">输入想要搜索信息的关键字</span> -->
-                        <div class="form-group">
-                            <label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                    </label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">从</div>
+                                    <input type="text" class="form-control input-sm" id="inputStartVal" placeholder="0">
                                 </div>
-                            </label>
-                            <div class="input-group">
-                                <div class="input-group-addon">从</div>
-                                <input type="text" class="form-control input-sm" id="inputStartVal" placeholder="0">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only"></label>
-                            <div class="input-group">
-                                <div class="input-group-addon">到</div>
-                                <input type="text" class="form-control input-sm" id="inputEndVal" placeholder="0">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only"></label>
-                            <div class="input-group">
-                                <div class="input-group-addon">通配符长度</div>
-                                <input type="text" class="form-control input-sm" id="inputLength" placeholder="0">
-                            </div>
-                            <label for="exampleInputPassword1">(1-3)</label>
-                        </div>
-                    </form>
-                    <form id="inputContent" class="form-inline">
-                        <div class="form-group">
-                            <label>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
-                                    </label>
+                            <div class="form-group">
+                                <label class="sr-only"></label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">到</div>
+                                    <input type="text" class="form-control input-sm" id="inputEndVal" placeholder="0">
                                 </div>
-                            </label>
-                            <div class="input-group">
-                                <div class="input-group-addon">到</div>
-                                <input type="text" class="form-control input-sm" id="inputStartVal" placeholder="a" readonly>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only"></label>
-                            <div class="input-group">
-                                <div class="input-group-addon">到</div>
-                                <input type="text" class="form-control input-sm" id="inputEndVal" placeholder="z" readonly>
-                            </div>
-                            <label for="exampleInputPassword1">(区分大小写)</label>
-                        </div>
-                    </form>
-                    <div class="optionCheckbox">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 网址
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 下载地址
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 生成预览缩略图
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="inlineCheckbox4" value="option4"> 全选
-                        </label>
-                    </div>
-                    <div class="bs-example" data-example-id="textarea-form-control">
-                        <form>
-                            <textarea class="form-control" rows="10" placeholder="Textarea"></textarea>
+                            <!--                          <div class="form-group">
+                                <label class="sr-only"></label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">通配符长度</div>
+                                    <input type="text" class="form-control input-sm" id="inputLength" placeholder="0">
+                                </div>
+                                <label for="exampleInputPassword1">(1-3)</label>
+                            </div> -->
                         </form>
+                        <form id="inputContent" class="form-inline">
+                            <div class="form-group">
+                                <label>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">到</div>
+                                    <input type="text" class="form-control input-sm" id="inputStartVal" placeholder="a" readonly>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only"></label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">到</div>
+                                    <input type="text" class="form-control input-sm" id="inputEndVal" placeholder="z" readonly>
+                                </div>
+                                <!-- <label for="exampleInputPassword1">(区分大小写)</label> -->
+                            </div>
+                        </form>
+                        <div class="optionCheckbox">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 网址
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 下载地址
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 生成预览缩略图
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox4" value="option4"> 全选
+                            </label>
+                        </div>
+                        <div class="bs-example" data-example-id="textarea-form-control">
+                            <form>
+                                <textarea class="form-control" rows="10" placeholder="Textarea"></textarea>
+                            </form>
+                        </div>
+                        <button type="button" id="capture" class="btn btn-default btn-lg btn-block">开始抓取</button>
                     </div>
-                    <button type="button" class="btn btn-default btn-lg btn-block">开始抓取</button>
                 </div>
-
             </div>
         </div>
     </div>
+    <div class="container-result">
+        <div id="example"></div>
+    </div>
 </body>
+<script src="release/bundle.js"></script>
 
 </html>
