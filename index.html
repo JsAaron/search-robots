@@ -15,11 +15,13 @@
     <link href="lib/css/bootstrap.css" rel="stylesheet">
     <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.js"></script>
-    <script src="lib/js/react.js"></script>
-    <script src="lib/js/JSXTransformer.js"></script>
+    <script src="lib/js/vue.js"></script>
 </head>
 
 <body>
+    <div id="example">
+        a={{ a }}, b={{ b }}
+    </div>
     <div class="container-main">
         <section class="top-bar-element">
             <div class="container-fluid">
@@ -116,16 +118,22 @@
                         </form>
                         <div class="optionCheckbox">
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 网址
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 采集链接
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 下载地址
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 搜索标题
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 生成预览缩略图
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 搜索内容
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" id="inlineCheckbox4" value="option4"> 全选
+                                <input type="checkbox" id="inlineCheckbox4" value="option4"> 采集内部下载地址
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox5" value="option5"> 生成预览缩略图
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox6" value="option6"> 全选
                             </label>
                         </div>
                         <div class="bs-example" data-example-id="textarea-form-control">
