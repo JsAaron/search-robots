@@ -1,18 +1,59 @@
 require('./app.css')
 
+Vue.config.debug = true
+
+
+
+var fetchData = [{
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}, {
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}, {
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}, {
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}, {
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}, {
+  title: "习近平纪委全会讲话哪些热词值得关注   从严治党"
+}]
+
+
+
 var vm = new Vue({
-  el: '#example',
-  data: {
-	b : 2,
-	a : 5
-  },
-  computed: {
-    // 一个计算属性的 getter
-    a: function () {
-      // `this` 指向 vm 实例
-      return this.b + 1
+    el: '#app-container',
+    data: {
+        newUser: {
+            url: '',
+            keyword: '',
+            formNumber: '',
+            toNumber: '',
+            formletter: '',
+            toletter: ''
+        },
+        commits: fetchData
+    },
+
+    //计算属性
+    computed: {
+        //关键字
+        validation: function() {
+            var value = this.newUser.keyword;
+            return {
+                'keywordsuccess': !!value,
+                'keyworderror': !value
+            }
+        }
+    },
+
+    methods: {
+        // 一个计算属性的 getter
+        commit: function() {
+            // `this` 指向 vm 实例
+            this.commits = fetchData;
+        }
+
     }
-  }
 })
 
 // var gui = requireNodePack('nw.gui');
@@ -23,6 +64,5 @@ var vm = new Vue({
 
 
 // $capture.click(function(){
-// 	// win.width = 1500;
+//  // win.width = 1500;
 // })
- 
