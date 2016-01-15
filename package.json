@@ -5,7 +5,7 @@
     "toolbar": true,
     "icon": "link.png",
     "frame": true,
-    "width": 1000,
+    "width": 1100,
     "height": 750,
     "position": "center",
     "show_in_taskbar": true

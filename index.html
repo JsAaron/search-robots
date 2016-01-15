@@ -109,22 +109,22 @@
                         </form>
                         <div class="optionCheckbox">
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions1" value="option1"> 采集链接
+                                <input type="checkbox" v-model="options.url" value="option1"> 采集链接
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions2" value="option2"> 搜索标题
+                                <input type="checkbox" v-model="options.title" value="option2"> 搜索标题
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions3" value="option3"> 搜索内容
+                                <input type="checkbox" v-model="options.content" value="option3"> 搜索内容
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions4" value="option4"> 采集内部下载地址
+                                <input type="checkbox" v-model="options.downloadUrl" value="option4"> 采集内部下载地址
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions5" value="option5"> 生成预览缩略图
+                                <input type="checkbox" v-model="options.preview" value="option5"> 生成预览缩略图
                             </label>
                             <label class="checkbox-inline">
-                                <input type="checkbox" v-model="checkedOptions6" value="option6"> 全选
+                                <input type="checkbox" @click="optionAll()" v-model="options.all" value="option6"> 全选
                             </label>
                         </div>
                         <div class="bs-example" data-example-id="textarea-form-control">
@@ -151,7 +151,7 @@
                 </div>
                 <ol>
                     <li v-for="data in commits">
-                        <p><a>{{data.title}}</a></p>
+                        <p><a >{{data.title}}</a></p>
                     </li>
                 </ol>
                 <div class="row">
