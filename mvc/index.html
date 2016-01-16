@@ -1,0 +1,23 @@
+<!doctype html>
+<html data-framework="vue">
+	<head>
+		<meta charset="utf-8">
+		<title>MVC测试</title>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<section class="todoapp">
+			<header class="header">
+				<h1>todos</h1>
+				<input class="new-todo"
+					autofocus autocomplete="off"
+					placeholder="What needs to be done?"
+					v-model="newTodo"
+					@keyup.enter="addTodo">
+			</header>
+		</section>
+
+		<script src="vue.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
